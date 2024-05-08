@@ -11,6 +11,9 @@ function Header() {
           <li>
             <Link to="/">Accueil</Link>
           </li>
+          <li>
+            <Link to="/pages/contact/index.jsx">Contact</Link>
+          </li>
         </ul>
       </nav>
     </header>

@@ -1,0 +1,44 @@
+// Import
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+// Défintion des variables
+
+$primary-color: #ff6060;
+$secondary-color: #000000;
+$background-color: #ffffff;
+
+// Définition des styles
+
+// Style généraux
+
+body {
+  font-family: 'Montserrat';
+}
+
+// Style du header
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px 50px;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+
+nav li {
+  margin: 0 25px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000000;
+}
