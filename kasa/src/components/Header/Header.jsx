@@ -1,18 +1,24 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import Logo from './LOGO.png'
 
 function Header() {
+  const location = useLocation()
+
   return (
     <header>
       <img src={Logo} alt="logo Kasa"></img>
       <nav>
         <ul>
-          <li>
+          <li className={location.pathname === '/' ? 'active' : ''}>
             <Link to="/">Accueil</Link>
           </li>
-          <li>
-            <Link to="/pages/contact/index.jsx">Contact</Link>
+          <li
+            className={
+              location.pathname.startsWith('/pages/contact') ? 'active' : ''
+            }
+          >
+            <Link to="/pages/contact/index.jsx">À propos</Link>
           </li>
         </ul>
       </nav>
