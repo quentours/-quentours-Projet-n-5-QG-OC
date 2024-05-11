@@ -36,21 +36,21 @@ header {
   align-items: center;
 }
 
-nav ul {
-  display: flex;
-  flex-direction: row;
-  list-style-type: none;
-}
-
-nav li {
-  margin-left: 50px;
-  font-size: 24px;
-  font-weight: 500;
-}
-
-nav a {
-  text-decoration: none;
-  color: #000000;
+nav {
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+  }
+  li {
+    margin-left: 50px;
+    font-size: 24px;
+    font-weight: 500;
+  }
+  a {
+    text-decoration: none;
+    color: #000000;
+  }
 }
 
 // Style pour la nav
@@ -71,14 +71,14 @@ nav a {
   background-size: cover;
   background-position: center;
   border-radius: 25px;
-}
 
-#bandeau h1 {
-  display: inline;
-  color: white;
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 68.45px;
+  h1 {
+    display: inline;
+    color: white;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 68.45px;
+  }
 }
 
 // Styles de la galerie
@@ -90,18 +90,18 @@ nav a {
   background-size: cover;
   background-position: center;
   margin: 50px;
-}
 
-.card h3 {
-  position: relative;
-  top: 400px;
-  left: 15px;
-  color: #ffffff;
-  font-size: 18px;
-  font-weight: 700;
-  white-space: normal;
-  word-wrap: break-word;
-  width: 200px;
+  h3 {
+    position: relative;
+    top: 400px;
+    left: 15px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    white-space: normal;
+    word-wrap: break-word;
+    width: 200px;
+  }
 }
 
 .gallery {
@@ -117,17 +117,12 @@ nav a {
   border-radius: 25px;
 }
 
-.gallery-wrapper {
-  display: flex;
-  justify-content: center;
-}
-
 // Style du footer
-
-footer img {
-  width: 100%;
-}
 
 footer {
   margin-top: 50px;
+
+  img {
+    width: 100%;
+  }
 }
