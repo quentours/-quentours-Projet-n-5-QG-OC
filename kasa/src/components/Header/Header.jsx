@@ -14,11 +14,9 @@ function Header() {
             <Link to="/">Accueil</Link>
           </li>
           <li
-            className={
-              location.pathname.startsWith('/pages/contact') ? 'active' : ''
-            }
+            className={location.pathname.startsWith('/Contact') ? 'active' : ''}
           >
-            <Link to="/pages/contact/index.jsx">À propos</Link>
+            <Link to="/Contact">À propos</Link>
           </li>
         </ul>
       </nav>
