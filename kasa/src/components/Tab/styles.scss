@@ -1,0 +1,67 @@
+@import '../../App.scss';
+
+// Style pour les composants Tab
+
+.tab {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 54px;
+  padding-left: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: $primary-color;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+
+  &-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  &-title {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  &-icon {
+    margin-right: 20px;
+    transition: transform 0.5s ease;
+  }
+
+  &-content {
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+  }
+
+  &-text {
+    color: $secondary-color;
+    padding: 10px;
+    background-color: #f6f6f6;
+    font-size: 16px;
+  }
+
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 40px;
+  }
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.fa-chevron-up {
+  margin-right: 20px;
+  font-size: 24px;
+  color: #ffffff;
+}

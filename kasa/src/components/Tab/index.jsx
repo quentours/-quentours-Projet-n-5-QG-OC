@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
+import './styles.scss'
 
 function Tab({ title, content }) {
   const [setOpen, setOpenState] = useState('')

@@ -5,7 +5,7 @@ import Bandeau from '../../components/Bandeau/index.jsx'
 import Tab from '../../components/Tab/index.jsx'
 import Footer from '../../components/Footer/index.jsx'
 
-function Contact() {
+function APropos() {
   const gradient = 'linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3))'
   const titre_contact = ''
 
@@ -54,4 +54,4 @@ function Contact() {
   )
 }
 
-export default Contact
+export default APropos
