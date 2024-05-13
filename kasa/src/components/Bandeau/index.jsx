@@ -1,9 +1,12 @@
 import React from 'react'
 
-function Bandeau() {
+function Bandeau({ backgroundImage, gradient, title }) {
+  const style = {
+    backgroundImage: `${gradient}, url(${backgroundImage})`,
+  }
   return (
-    <div id="bandeau">
-      <h1>Chez vous, partout et ailleurs</h1>
+    <div id="bandeau" style={style}>
+      `<h1>{title}</h1>`
     </div>
   )
 }
