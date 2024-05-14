@@ -12,13 +12,15 @@ function Index() {
   const titre_home = 'Chez vous partout, et ailleurs'
   return (
     <div>
-      <Header />
-      <Bandeau
-        gradient={gradient}
-        backgroundImage={background}
-        title={titre_home}
-      />
-      <Gallery />
+      <div id="main-wrapper">
+        <Header />
+        <Bandeau
+          gradient={gradient}
+          backgroundImage={background}
+          title={titre_home}
+        />
+        <Gallery />
+      </div>
       <Footer />
     </div>
   )

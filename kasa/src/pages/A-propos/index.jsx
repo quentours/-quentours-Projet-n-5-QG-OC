@@ -34,20 +34,22 @@ function APropos() {
 
   return (
     <div>
-      <Header />
-      <Bandeau
-        gradient={gradient}
-        backgroundImage={background}
-        title={titre_contact}
-      />
-      <div className="tab-wrapper">
-        {data.map((contact, index) => (
-          <Tab
-            title={contact.title}
-            content={contact.content}
-            key={`${contact.title}-${index}`}
-          />
-        ))}
+      <div id="main-wrapper">
+        <Header />
+        <Bandeau
+          gradient={gradient}
+          backgroundImage={background}
+          title={titre_contact}
+        />
+        <div className="tab-wrapper">
+          {data.map((contact, index) => (
+            <Tab
+              title={contact.title}
+              content={contact.content}
+              key={`${contact.title}-${index}`}
+            />
+          ))}
+        </div>
       </div>
       <Footer />
     </div>
