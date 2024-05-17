@@ -14,13 +14,6 @@
   cursor: pointer;
   transition: background-color 0.5s ease;
 
-  &-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 30px;
-  }
-
   &-title {
     color: #ffffff;
     font-size: 24px;
@@ -42,17 +35,6 @@
     padding: 10px;
     background-color: #f6f6f6;
     font-size: 16px;
-  }
-
-  &-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 40px;
   }
 }
 

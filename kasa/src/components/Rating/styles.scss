@@ -1,0 +1,19 @@
+@import '../../App.scss';
+
+.rating {
+  display: flex;
+  margin-top: 25px;
+
+  .fa-star {
+    margin-right: 5px;
+    font-size: 24px;
+  }
+
+  .filled {
+    color: $primary-color;
+  }
+
+  .unfilled {
+    color: #e3e3e3;
+  }
+}
