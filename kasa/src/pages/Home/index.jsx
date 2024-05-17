@@ -3,6 +3,7 @@ import Bandeau from '../../components/Bandeau/index.jsx'
 import Gallery from '../../components/Gallery/index.jsx'
 import Footer from '../../components/Footer/index.jsx'
 import background from './background1.png'
+import Logement from '../Logement/index.jsx'
 
 // import './index.css'
 // import App from './pages/Home/index'
@@ -19,7 +20,7 @@ function Index() {
           backgroundImage={background}
           title={titre_home}
         />
-        <Gallery />
+        <Gallery link={`/Logement/${Logement.id}`} />
       </div>
       <Footer />
     </div>

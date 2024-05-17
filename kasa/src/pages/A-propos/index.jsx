@@ -4,6 +4,7 @@ import background from './background2.png'
 import Bandeau from '../../components/Bandeau/index.jsx'
 import Tab from '../../components/Tab/index.jsx'
 import Footer from '../../components/Footer/index.jsx'
+import './styles.scss'
 
 function APropos() {
   const gradient = 'linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3))'
@@ -41,7 +42,7 @@ function APropos() {
           backgroundImage={background}
           title={titre_contact}
         />
-        <div className="tab-wrapper">
+        <div className="tab1-wrapper">
           {data.map((contact, index) => (
             <Tab
               title={contact.title}
