@@ -1,4 +1,5 @@
 import React from 'react'
+import './styles.scss'
 
 function Bandeau({ backgroundImage, gradient, title }) {
   const style = {

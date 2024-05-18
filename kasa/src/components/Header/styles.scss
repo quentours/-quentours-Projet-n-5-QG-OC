@@ -1,0 +1,39 @@
+@import '../../App.scss';
+
+// Style du header
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 40px auto;
+  align-items: center;
+}
+
+nav {
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+  }
+  li {
+    margin-left: 50px;
+    font-size: 24px;
+    font-weight: 500;
+  }
+  a {
+    text-decoration: none;
+    color: #000000;
+  }
+}
+
+// Style pour la nav
+
+.active {
+  text-decoration: underline;
+  cursor: default;
+
+  a {
+    cursor: default;
+  }
+}
