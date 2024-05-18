@@ -21,3 +21,11 @@
 .tab {
   width: 100%;
 }
+
+@media (max-width: 768px) {
+  .tab1-wrapper {
+    margin-right: 0;
+    margin-left: 0;
+    width: 100%;
+  }
+}

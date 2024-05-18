@@ -1,0 +1,22 @@
+@import '../../App.scss';
+
+// Styles du bandeau
+
+#bandeau {
+  position: relative;
+  width: 100%;
+  height: 223px;
+  flex-direction: row;
+  @include flex-center;
+  background-size: cover;
+  background-position: center;
+  border-radius: 25px;
+
+  h1 {
+    display: inline;
+    color: white;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 68.45px;
+  }
+}
