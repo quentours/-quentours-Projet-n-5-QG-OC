@@ -47,3 +47,23 @@
   font-size: 24px;
   color: #ffffff;
 }
+
+@media (max-width: 768px) {
+  .tab {
+    padding-left: 15px;
+    height: 30px;
+
+    &-title {
+      font-size: 13px;
+    }
+
+    &-text {
+      font-size: 12px;
+    }
+  }
+
+  .fa-chevron-up {
+    margin-right: 5px;
+    font-size: 16px;
+  }
+}

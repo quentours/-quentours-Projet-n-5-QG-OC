@@ -8,6 +8,11 @@ header {
   justify-content: space-between;
   margin: 40px auto;
   align-items: center;
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
 }
 
 nav {
@@ -22,6 +27,7 @@ nav {
     font-weight: 500;
   }
   a {
+    white-space: nowrap;
     text-decoration: none;
     color: #000000;
   }
@@ -36,4 +42,15 @@ nav {
   a {
     cursor: default;
   }
+}
+
+@media (max-width: 768px) {
+  nav li {
+    margin-left: 25px;
+    font-size: 12px;
+  }
+}
+
+img {
+  height: 46px;
 }
