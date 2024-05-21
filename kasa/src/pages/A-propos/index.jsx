@@ -52,7 +52,9 @@ function APropos() {
           ))}
         </div>
       </div>
-      <Footer />
+      <div id="a-prop-footer">
+        <Footer />
+      </div>
     </div>
   )
 }
