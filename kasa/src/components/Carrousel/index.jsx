@@ -8,19 +8,34 @@ import './styles.scss'
 
 function Carrousel({ pictures }) {
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [transition, setTransition] = useState(true)
 
   const previousSlide = () => {
     const lastIndex = pictures.length - 1
-    const shouldResetIndex = currentIndex === 0
-    const index = shouldResetIndex ? lastIndex : currentIndex - 1
-    setCurrentIndex(index)
+    if (currentIndex === 0) {
+      setTransition(true)
+      setCurrentIndex(lastIndex - 1)
+      setTimeout(() => {
+        setTransition(false)
+        setCurrentIndex(lastIndex)
+      }, 50)
+    } else {
+      setCurrentIndex(currentIndex - 1)
+    }
   }
 
   const nextSlide = () => {
     const lastIndex = pictures.length - 1
-    const shouldResetIndex = currentIndex === lastIndex
-    const index = shouldResetIndex ? 0 : currentIndex + 1
-    setCurrentIndex(index)
+    if (currentIndex === lastIndex) {
+      setTransition(true)
+      setCurrentIndex(1)
+      setTimeout(() => {
+        setTransition(false)
+        setCurrentIndex(0)
+      }, 50)
+    } else {
+      setCurrentIndex(currentIndex + 1)
+    }
   }
 
   const iconClass = pictures.length === 1 ? 'unactive' : ''
@@ -32,7 +47,10 @@ function Carrousel({ pictures }) {
       </button>
       <div
         className="image-container"
-        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        style={{
+          transform: `translateX(-${currentIndex * 100}%)`,
+          transition: transition ? 'transform 0.9s ease-in-out' : 'none',
+        }}
       >
         {pictures.map((picture, index) => (
           <img
