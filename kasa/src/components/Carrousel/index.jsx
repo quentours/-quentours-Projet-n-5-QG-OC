@@ -7,34 +7,45 @@ import {
 import './styles.scss'
 
 function Carrousel({ pictures }) {
-  const [currentIndex, setCurrentIndex] = useState(0)
+  const extendedPictures = [
+    pictures[pictures.length - 1],
+    ...pictures,
+    pictures[0],
+  ]
+  const [currentIndex, setCurrentIndex] = useState(1)
   const [transition, setTransition] = useState(true)
 
   const previousSlide = () => {
-    const lastIndex = pictures.length - 1
-    if (currentIndex === 0) {
-      setTransition(true)
-      setCurrentIndex(lastIndex - 1)
+    setCurrentIndex(currentIndex - 1)
+    if (currentIndex === 1) {
       setTimeout(() => {
         setTransition(false)
-        setCurrentIndex(lastIndex)
-      }, 50)
+        setCurrentIndex(pictures.length)
+      }, 500)
     } else {
-      setCurrentIndex(currentIndex - 1)
+      setTransition(true)
     }
   }
 
   const nextSlide = () => {
-    const lastIndex = pictures.length - 1
-    if (currentIndex === lastIndex) {
-      setTransition(true)
-      setCurrentIndex(1)
+    setCurrentIndex(currentIndex + 1)
+    if (currentIndex === pictures.length) {
       setTimeout(() => {
         setTransition(false)
-        setCurrentIndex(0)
-      }, 50)
+        setCurrentIndex(1)
+      }, 500)
     } else {
-      setCurrentIndex(currentIndex + 1)
+      setTransition(true)
+    }
+  }
+
+  const handleTransitionEnd = () => {
+    if (currentIndex === 0) {
+      setTransition(false)
+      setCurrentIndex(pictures.length)
+    } else if (currentIndex === pictures.length + 1) {
+      setTransition(false)
+      setCurrentIndex(1)
     }
   }
 
@@ -51,8 +62,9 @@ function Carrousel({ pictures }) {
           transform: `translateX(-${currentIndex * 100}%)`,
           transition: transition ? 'transform 0.9s ease-in-out' : 'none',
         }}
+        onTransitionEnd={handleTransitionEnd}
       >
-        {pictures.map((picture, index) => (
+        {extendedPictures.map((picture, index) => (
           <img
             key={index}
             src={picture}
@@ -65,7 +77,7 @@ function Carrousel({ pictures }) {
         <FontAwesomeIcon icon={faChevronRight} />
       </button>
       <p className={`numerotation ${iconClass}`}>
-        {currentIndex + 1}/{pictures.length}
+        {currentIndex}/{pictures.length}
       </p>
     </div>
   )
