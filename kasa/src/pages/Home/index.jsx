@@ -5,9 +5,6 @@ import Footer from '../../components/Footer/index.jsx'
 import background from './background1.png'
 import Logement from '../Logement/index.jsx'
 
-// import './index.css'
-// import App from './pages/Home/index'
-
 function Index() {
   const gradient = 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6))'
   const titre_home = 'Chez vous partout, et ailleurs'
